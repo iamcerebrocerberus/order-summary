@@ -1,0 +1,112 @@
+@use "../abstracts/functions" as fu;
+@use "../abstracts/mixins" as mx;
+
+
+.order{
+    width: fu.pxCon(448,em);
+    @include mx.border-radius(20);
+    margin: fu.pxCon(12,rem);
+    overflow: hidden;
+
+    &__image img{
+        max-width: 100%;
+    }
+    &-down{
+        padding: fu.pxCon(41,rem);
+        text-align: center;
+
+        &__heading{
+            margin-top: fu.pxCon(10,rem);
+
+            @include mx.respond-to("small"){
+                margin-top: fu.pxCon(0,rem);
+            }
+            
+        }
+
+        .txt-in-order{
+            display: flex;
+            margin: fu.pxCon(23,rem) 0;
+            flex-direction: column;
+            align-items: center;
+            .order-down__txt{
+                width: 20rem;
+                margin: 0;  
+                @supports (width: 33ch){
+                    width: 33ch;
+                }
+                @include mx.respond-to("medium"){
+                    width: 16rem;
+                    @supports (width: 25ch){
+                        width: 25ch;
+                    }
+                }
+           }
+        }
+    }
+    @include mx.respond-to("medium"){
+            width: fu.pxCon(366,em);
+    }
+    
+    @include mx.respond-to("small"){
+        width: fu.pxCon(300,em);
+    }
+}
+
+
+.order{
+    @include mx.get-color(background-color,primary,"white");
+
+    &__cancel{
+        margin-top: fu.pxCon(30,rem);
+    }
+
+    &__image img{
+        display: block;
+    }
+}
+
+.annual{
+    display: flex;
+    @include mx.get-color(background-color,neutral,order-bg-color);
+    padding: fu.pxCon(22,rem);
+    @include mx.border-radius(12); 
+
+    @include mx.respond-to("small"){
+        padding: fu.pxCon(12,rem);
+    }
+
+    &__img{
+        display: flex;
+        & img{
+            @include mx.respond-to("small"){
+                width: fu.pxCon(30,rem);
+                align-self:center;
+            }
+        }
+    }
+    
+    &-plan{
+        margin-left: fu.pxCon(18,rem);
+        align-self: center;
+
+
+        @include mx.respond-to("small"){
+            font-size: fu.pxCon(12,rem);
+        }
+        &__head{
+            margin-bottom: fu.pxCon(5,rem);
+        }
+    }
+
+    &__link{
+        align-self: center;
+        margin-left: auto;
+    }
+}
+
+// @include mx.respond-to("medium"){
+//     .order{
+//         width: fu.pxCon(366,em);
+//     }
+// }

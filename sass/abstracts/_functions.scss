@@ -1,0 +1,16 @@
+@use "sass:meta";
+@use "sass:math";
+
+
+// function to convert px to em and rem
+$def-font: 16; //default font [16px]
+$rem : "rem";
+$em: "em";
+@function pxCon($val,$unit){
+    @if (meta.type-of($val) == number) and (($unit == $rem) or ($unit == $em)){
+        $val: math.div($val,$def-font);
+    }@else{
+        @error "first arg must be [number] and second arg must be ['rem'] or ['em']";
+    }
+    @return #{$val}+$unit;
+}

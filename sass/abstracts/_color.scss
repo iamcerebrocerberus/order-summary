@@ -1,0 +1,15 @@
+$colors: (
+    "primary": (
+        "white": hsl(0,100%,100%), //white
+        "annual-bg-color": hsl(225, 100%, 94%), // pale blue
+        "btn-bg-color": hsl(245, 75%, 52%) // bright blue
+    ),
+    "neutral": (
+        "order-bg-color": hsl(225, 100%, 98%), // very pale blue
+        "txt-color": hsl(224, 23%, 55%), // desaturated blue
+        "heading-color": hsl(223, 47%, 23%), // dark blue
+        "link-hover": hsla(245, 75%, 52%,0.7),
+        "cancel-hover": hsl(223, 47%, 23%),
+        "cancel": hsla(223, 47%, 23%,0.8)
+    )
+)

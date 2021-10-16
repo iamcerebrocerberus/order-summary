@@ -1,0 +1,132 @@
+@use "../abstracts/functions" as fu;
+@use "../abstracts/mixins" as mx;
+*{
+    font-family: "Red Hat Display", san-serif;
+    font-size: fu.pxCon(16,rem);
+}
+
+.order-down{
+    &__heading{
+        font-size: fu.pxCon(30,rem);
+        font-weight: 900;
+        @include mx.get-color(color,neutral,heading-color);
+
+        @include mx.respond-to("medium"){
+            font-size: fu.pxCon(25,rem);
+        }
+
+        @include mx.respond-to("small"){
+            font-size: fu.pxCon(22,rem);
+        }
+    }
+
+    &__txt{ 
+        font-size: fu.pxCon(17,rem);
+        @include mx.get-color(color,neutral,txt-color);
+        line-height: 1.5;
+
+        @include mx.respond-to("medium"){
+            font-size: fu.pxCon(16,rem);
+        }
+
+        @include mx.respond-to("small"){
+            font-size: fu.pxCon(14,rem);
+        }
+    }
+}
+
+.order{
+    &__cancel{
+        & a{
+            font-weight: 900;
+            @include mx.get-color(color,neutral,cancel);
+            text-decoration: none;
+
+            @include mx.respond-to("small"){
+                font-size: fu.pxCon(14,rem);
+            }
+        }
+
+        & a:hover{
+            @include mx.get-color(color,neutral,cancel-hover);
+            cursor: pointer;
+        }
+
+        & a:focus{
+            @include mx.get-color(color,neutral,cancel-hover);
+        }
+    }
+}
+
+.annual{
+    &__link{
+        font-weight: 700;
+        & a{
+            @include mx.respond-to("medium"){
+                font-size: fu.pxCon(14,rem);
+            }
+
+            @include mx.respond-to("small"){
+                font-size: fu.pxCon(13,rem);
+            }
+        }
+
+        a:link{
+            @include mx.get-color(color,primary,btn-bg-color);
+    }
+    a:focus{
+        @include mx.get-color(color,primary,btn-bg-color);
+}
+
+    a:hover{
+        @include mx.get-color(color,neutral,link-hover);
+        text-decoration: none;
+}
+    }
+    &-plan__head{
+        @include mx.get-color(color,neutral,heading-color);
+        font-weight: 900;
+    }
+
+    &-plan__txt{
+         @include mx.get-color(color,neutral,txt-color);
+    }
+
+    &-plan{
+        @include mx.respond-to("medium"){
+            font-size: fu.pxCon(14,rem);
+        }
+    }
+}
+
+button{
+    @include mx.get-color(color,neutral,order-bg-color);
+    font-weight: 700;
+    font-size: fu.pxCon(16,rem);
+
+    
+    &:hover{
+        @include mx.get-color(background-color,neutral,link-hover);
+        cursor: pointer;
+    }
+    &:focus{
+        @include mx.get-color(background-color,neutral,link-hover);
+    }
+    @include mx.respond-to("small"){
+        font-size: fu.pxCon(13,rem) !important;
+    }
+}
+
+footer p,a{
+    $val: 15;
+    font-size: fu.pxCon($val,rem);
+    text-align: center;
+    @include mx.respond-to("medium"){
+            font-size: fu.pxCon(14,rem);
+        }
+    @include mx.respond-to("small"){
+            font-size: fu.pxCon(12,rem);
+        }
+
+    
+}

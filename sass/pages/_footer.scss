@@ -1,0 +1,9 @@
+@use "../abstracts/functions" as fu;
+
+footer{
+    margin-top: fu.pxCon(30,rem);
+
+    a{
+        text-decoration: none;
+    }
+}

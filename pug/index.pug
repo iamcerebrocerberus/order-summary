@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="author" content="cerebro_cerberus")
+        meta(name="description", content="This is an order summary component solution")
+        link(rel="stylesheet", href="css/main.css")
+        link(rel="icon", href="images/favicon-32x32.png", sizes="32x32", type="image/png" )
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet")
+        title Frontendmentor | order-summary-component
+    body 
+        main.order 
+            .order__image.order-top
+                img(src="images/illustration-hero.svg" alt="hero")
+            .order-down
+                h1.order-down__heading Order Summary
+                div.txt-in-order
+                    p.order-down__txt You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+                .annual 
+                    .annual__img 
+                        img(src="images/icon-music.svg" alt="music")
+                    .annual-plan 
+                        h2.annual-plan__head Annual Plan 
+                        p.annual-plan__txt $59.99/year
+                    p.annual__link 
+                        a(href="#") Change
+                button Proceed to Payment 
+                p.order__cancel
+                     a(href="#") Cancel Order
+        footer 
+            p challenge by <a>Frontendmentor</a>. Coded by <a href="https://github.com/iamcerebrocerberus" target="_blank">cerebro_cerberus</a>.
+                
+                
+                

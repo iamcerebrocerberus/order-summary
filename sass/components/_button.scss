@@ -1,0 +1,10 @@
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/functions" as fu;
+button{
+    display: inline-block;
+    width: 100%;
+    @include mx.get-color(background-color,primary,btn-bg-color);
+    padding: fu.pxCon(16,rem);
+    @include mx.border-radius(12);
+    margin-top: fu.pxCon(29,rem);
+}

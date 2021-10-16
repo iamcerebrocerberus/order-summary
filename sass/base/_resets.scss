@@ -1,0 +1,11 @@
+@use "../abstracts/mixins" as mx;
+*{
+    &,&::before,&::after{
+        @include mx.box-sizing();
+    }
+}
+
+html,body,div,span,
+h1,h2,h3,h4,h5,p,img,button{
+    @include mx.base-reset();
+}

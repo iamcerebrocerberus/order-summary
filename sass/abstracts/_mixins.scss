@@ -1,0 +1,55 @@
+@use "sass:map";
+@use "../abstracts/breakpoints" as br;
+@use "../abstracts/functions" as fu;
+@use "../abstracts/color" as cl;
+@use "../abstracts/background-img" as bg-img;
+
+//box-sizing reset
+@mixin box-sizing(){
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+//reset mixin
+@mixin base-reset(){
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: 0;
+}
+
+//color getter mixin
+@mixin get-color($prop,$key,$val){
+    $color: map-get(cl.$colors,$key,$val);
+    #{$prop}: $color;
+}
+
+//border radius
+@mixin border-radius($val){
+    $val: fu.pxCon($val,rem);
+    #{border-radius}: $val;
+}
+
+//flex mixin
+@mixin flex(){
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+//background image importer
+@mixin get-bg-img($prop,$key){
+    $val: map-get(bg-img.$bg-img,$key);
+    #{$prop}: $val;
+}
+
+//media query mixin
+@mixin respond-to($val){
+    $val: fu.pxCon(map-get(br.$breakpoint,$val),em);
+    @media screen and (max-width:$val) {
+        @content;
+    }
+}
+
