@@ -1,5 +1,5 @@
 # About Project
-This is a [frontendmentor](https://www.frontendmentor.io/challenges/order-summary-component-QIPmajDUj) i completed using
+This is a [frontendmentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) i completed using
 
 ## Languages and Methodologies
 - PUG
