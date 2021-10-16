@@ -1,5 +1,5 @@
 # About Project
-This is a [frontendmentor](https://frontendmentor.io/challenges/order-summary-component-QIPmajDUj) i completed using
+This is a [frontendmentor](https://www.frontendmentor.io/challenges/order-summary-component-QIPmajDUj) i completed using
 
 ## Languages and Methodologies
 - PUG
@@ -10,22 +10,22 @@ This is a [frontendmentor](https://frontendmentor.io/challenges/order-summary-co
 I used the 7-1 architecture for sass. Below is the folder tree of the sass(scss) folder
 
 ## Folder tree
-1. [Abstracts](sass/abstracts)
+1. Abstracts
     - [background-images](sass/abstracts/_background-img.scss)
     - [breakpoints](sass/abstracts/_breakpoints.scss)
     - [colors](sass/abstracts/_color.scss)
     - [functions](sass/abstracts/_functions.scss)
     - [mixins](sass/abstracts/_mixins.scss)
 
-2. [Base](sass/base)
+2. Base
     - [resets](sass/base/_resets.scss)
     - [typography](sass/base/_typography.scss)
 
-3. [Components](sass/components)
+3. Components
     - [buttons](sass/components/_button.scss)
     - [order](sass/components/_order.scss)
 
-4. [Pages](sass/pages)
+4. Pages
     - [footer](sass/pages/_footer.scss)
     - [home](sass/pages/_home.scss)
 
